@@ -5,15 +5,32 @@
  * Built using Tabletop.js
  */
 
-window.gDoc = function (data, column) {
-    if (typeof(data) === 'object') {
+window.gDoc = function (data, sheet) {
+    if (typeof (data) === 'object') {
         // start cache
-        var selector = data.selector;
-        var gData = data.column;
+        var id = data.id;
+        var array = data.data;
         var html = data.html;
+        return false;
     } else {
-        // start cache
-        var selector = data;
-        var gData = data.column;
+        // using tabletop to get gDoc
+        function tabletop(doc) {
+            Tabletop.init({
+                key: doc,
+                callback: insertDoc,
+                simpleSheet: false
+            });
+        }
+        // inserting gDoc data
+        function insertDoc(obj) {
+            // grab sheet
+            obj = obj[sheet].elements[0];
+            // convert to array
+            obj = Object.keys(obj).map(function (key) {
+                return obj[key]
+            });
+        }
+        // calling spreadsheet
+        tabletop(data);
     }
 };
