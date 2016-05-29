@@ -21,7 +21,7 @@ Inside of your HTML document include these two files into your head.
 
 Now at the footer of your html page initiate the connection! 
 
-* By default the sheetName is 'Sheet1' *
+_By default the sheetName is 'Sheet1'_
 
 ```html
     <script>
@@ -29,7 +29,7 @@ Now at the footer of your html page initiate the connection!
     </script>
 ```
 
-* Example of a connection * 
+_Example of a connection_
 
 ```html
     <script>
@@ -42,7 +42,7 @@ Now at the footer of your html page initiate the connection!
 
 All that's left now is to add gDoc attributes to your html!
 
-* How to insert from example spreadsheet above. *
+_How to insert from example spreadsheet above._
 
 ```html 
     <html>
