@@ -1,12 +1,13 @@
 /*!
- * gDoc v1.0.0 (http://jadeallencook.com/gDoc.js)
+ * gDoc v1.0.1 (http://jadeallencook.com/gDoc.js)
  * Copyright 2016-2016 Jade Allen Cook
  * Licensed under the MIT license
  * Built using Tabletop.js
  */
 
+// attaching function to window
 window.gDoc = function (data, sheet) {
-    
+    // caching build functions
     var build = {
         // build complete sheet
         layout: function () {
@@ -50,15 +51,53 @@ window.gDoc = function (data, sheet) {
         // build block of html
         block: function () {
             // start cache
-            var id = data.id;
-            var array = data.data;
-            var html = data.html;
             var public = data.public;
+            var sheet = data.sheet;
+            var element = data.gDoc;
+            var columns = data.columns;
+            var loops = data.loop;
+            // insert values into html function
+            var html = data.html('test', 'test');
+            // using tabletop to get gDoc
+            function tabletop(doc) {
+                Tabletop.init({
+                    key: doc,
+                    callback: insertDoc,
+                    simpleSheet: false
+                });
+            }
+            // inserting gDoc data
+            function insertDoc(obj) {
+                // grab sheet
+                obj = obj[sheet].elements;
+                // loop through gDoc array and then build html
+                if (loops == false)
+                    for (var i = 0; i < obj.length; i++) build.html(obj, i, element, html, columns);
+                else
+                    for (var i = 0; i < loops; i++) build.html(obj, i, element, html, columns);
+            }
+            // calling spreadsheet
+            tabletop(public);
+        },
+        // for loop block build
+        html: function (obj, count, element, html, columns) {
+            // grab sheet
+            obj = obj[count];
+            // loop through columns to get selectors
+            for (var i = 0; i < columns.length; i++) {
+                // cache values for html build
+                var column = columns[i];
+                var value = obj[column];
+                // replace mustaches with values
+                html = html.replace('{{' + column + '}}', value);
+            }
+            // get element to insert html
+            element = document.querySelector('[gDoc="' + element + '"]');
+            // append html to element
+            element.insertAdjacentHTML('beforeend', html);
         }
     };
-
     // layout and block switch - based on var data 
     if (typeof (data) === 'object') build.block();
     else build.layout();
-    
 };

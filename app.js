@@ -11,10 +11,10 @@ window.onload = function() {
         public: public,
         sheet: 'links',
         gDoc: 'links',
-        data: ['title', 'link'],
+        columns: ['text', 'link'],
         loop: false,
         html: function() {
-            var html = '<a href="{{link}}">{{title}}</a>';
+            var html = '<a href="{{link}}">{{text}}</a>';
             return html;
         }
     });
