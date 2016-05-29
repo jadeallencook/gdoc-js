@@ -12,39 +12,39 @@ Create a Google Spreadsheet containing all the information you will need for the
 
 Inside of your HTML document include these two files into your head.
 
-'''html
+```html
     <head>
         <script src="tabletop.js"></script>
         <script src="gDoc.js"></script>
     </head>
-'''
+```
 
 Now at the footer of your html page initiate the connection! 
 
 * By default the sheetName is 'Sheet1' *
 
-'''html
+```html
     <script>
         gDoc(yourPublicId, sheetName);
     </script>
-'''
+```
 
 * Example of a connection * 
 
-'''html
+```html
     <script>
         // caching the public id 
         var public = '1cfW7dwJkwJq7rqTsftNy3wjCJR3-yDylc5MRmsc0Yw8';
         // initiating connection
         gDoc(public, 'layout');
     </script>
-'''
+```
 
 All that's left now is to add gDoc attributes to your html!
 
 * How to insert from example spreadsheet above. *
 
-'''html 
+```html 
     <html>
         <head>
             <title gDoc="title"></title>
@@ -54,6 +54,6 @@ All that's left now is to add gDoc attributes to your html!
             <h2 gDoc="subheader"></h2>
         </body>
     </html>
-'''
+```
 
 And it's that easy!
