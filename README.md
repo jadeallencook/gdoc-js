@@ -4,7 +4,13 @@ Use Google Spreadsheets as your CMS!
 
 # Getting Started
 
-Create a Google Spreadsheet containing all the information you will need for the site. After you're done, go to choose 'Publish to the web...' in the 'File' menu. After you publish the document, grab the id in the link 'https://docs.google.com/spreadsheets/d/yourPublicId/pubhtml'.
+Create a Google Spreadsheet containing all the information you will need for your site. After, choose 'Publish to the web...' in the 'File' menu. Then grab the id in the link.
+
+```html
+    https://docs.google.com/spreadsheets/d/yourPublicId/pubhtml
+```
+
+__Example spreadsheet__
 
 | title       | header   | subheader           |
 | ----------- |:--------:| -------------------:|
@@ -21,7 +27,7 @@ Inside of your HTML document include these two files into your head.
 
 Now at the footer of your html page initiate the connection! 
 
-_By default the sheetName is 'Sheet1'_
+__By default the sheetName is 'Sheet1'__
 
 ```html
     <script>
@@ -29,7 +35,7 @@ _By default the sheetName is 'Sheet1'_
     </script>
 ```
 
-_Example of a connection_
+__Example connection__
 
 ```html
     <script>
@@ -42,7 +48,7 @@ _Example of a connection_
 
 All that's left now is to add gDoc attributes to your html!
 
-_How to insert from example spreadsheet above._
+__How to insert from example spreadsheet above.__
 
 ```html 
     <html>
