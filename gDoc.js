@@ -1,5 +1,5 @@
 /*!
- * gDoc v1.0.1 (http://jadeallencook.com/gDoc.js)
+ * gDoc.js v1.0.1 (https://github.com/jadeallencook/gDoc)
  * Copyright 2016-2016 Jade Allen Cook
  * Licensed under the MIT license
  * Built using Tabletop.js
@@ -57,7 +57,7 @@ window.gDoc = function (data, sheet) {
             var columns = data.columns;
             var loops = data.loop;
             // insert values into html function
-            var html = data.html('test', 'test');
+            var html = data.html();
             // using tabletop to get gDoc
             function tabletop(doc) {
                 Tabletop.init({
@@ -91,7 +91,7 @@ window.gDoc = function (data, sheet) {
                 // replace mustaches with values
                 html = html.replace('{{' + column + '}}', value);
             }
-            // get element to insert html
+            // get element to insert html into
             element = document.querySelector('[gDoc="' + element + '"]');
             // append html to element
             element.insertAdjacentHTML('beforeend', html);
