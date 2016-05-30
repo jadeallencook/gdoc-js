@@ -6,23 +6,19 @@ Use Google Spreadsheets as your CMS!
 
 Create a Google Spreadsheet containing all the information you will need for your site. After, choose 'Publish to the web...' in the 'File' menu. Then grab the id in the link.
 
+https://docs.google.com/spreadsheets/d/__yourPublicId__/pubhtml
+
+Inside of your HTML document include these two files.
+
 ```html
-https://docs.google.com/spreadsheets/d/yourPublicId/pubhtml
+<script src="tabletop.js"></script>
+<script src="gDoc.js"></script>
 ```
 
-__Example spreadsheet__
-
-| title               | header              | subheader           |
-| ------------------- |:-------------------:| -------------------:|
-| My website          | Welcome,            | This is my website! |
-
-Inside of your HTML document include these two files into your head.
+__Or just this file__
 
 ```html
-<head>
-    <script src="tabletop.js"></script>
-    <script src="gDoc.js"></script>
-</head>
+<script src="gDoc.min.js"></script>
 ```
 
 Now at the footer of your html page initiate the connection! 
@@ -45,6 +41,12 @@ __Example connection__
 ```
 
 All that's left now is to add gDoc attributes to your html!
+
+__Example spreadsheet__
+
+| title               | header              | subheader           |
+| ------------------- |:-------------------:| -------------------:|
+| My website          | Welcome,            | This is my website! |
 
 __How to insert from example spreadsheet above.__
 
