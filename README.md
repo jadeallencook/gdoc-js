@@ -2,11 +2,15 @@
 
 Use Google Spreadsheets as your CMS!
 
+[Demo Page](http://jadeallencook.github.io/gDoc.js/)
+
 # Getting Started
 
 Create a Google Spreadsheet containing all the information you will need for your site. After, choose 'Publish to the web...' in the 'File' menu. Then grab the id in the link.
 
+```
 https://docs.google.com/spreadsheets/d/__yourPublicId__/pubhtml
+```
 
 Inside of your HTML document include these two files.
 
