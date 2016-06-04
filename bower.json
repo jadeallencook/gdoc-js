@@ -1,0 +1,28 @@
+{
+  "name": "gDoc.js",
+  "main": "gDoc.js",
+  "homepage": "https://github.com/jadeallencook/gDoc.js",
+  "authors": [
+    "Jade Allen Cook <jadeallencook@gmail.com>"
+  ],
+  "description": "Use Google Spreadsheets as your CMS!",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "Google",
+    "Spreadsheet",
+    "docs",
+    "cms"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
