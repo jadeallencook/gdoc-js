@@ -88,7 +88,7 @@ window.gDoc = function (data, sheet) {
                 var column = columns[i];
                 var value = obj[column];
                 // replace mustaches with values
-                html = html.replace('{{' + column + '}}', value);
+                html = html.replace(new RegExp('{{' + column + '}}',"g"), value);
             }
             // get element to insert html into
             element = document.querySelector('[gDoc="' + element + '"]');
