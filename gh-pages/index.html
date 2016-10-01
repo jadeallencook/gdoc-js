@@ -4,13 +4,38 @@
 
 <head>
     <title gDoc="title"></title>
+    <script src="jquery.min.js"></script>
     <script src="gDoc.min.js"></script>
+    <style>
+        body {
+            font-family: 'Helvetica';
+        }
+        h1, h2 {
+            font-weight: 100;
+        }
+        form#my-form input {
+            display: block;
+            margin: 5px auto;
+            padding: 5px;
+            border-radius: 3px;
+            border: #ddd solid thin;
+        }
+        form#my-form input[type="submit"] {
+            background-color: dodgerblue;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
 
     <center>
 
+        <h1>Use gDoc.js for your CMS</h1>
+        
         <table border="1px" cellpadding="3px">
             <tr>
                 <td><b>header</b></td>
@@ -30,16 +55,26 @@ gDoc('1cfW7dwJkwJq7rqTsftNy3wjCJR3-yDylc5MRmsc0Yw8', 'layout');
 
         <!-- layout example -->
         <h1 gDoc="header"></h1>
-        
+
 <xmp>
 <h1 gDoc="header"></h1>
 </xmp>
-        
+
         <h2 gDoc="subtitle"></h2>
-        
+
 <xmp>
 <h2 gDoc="subtitle"></h2>
 </xmp>
+        <br />
+        <br />
+        
+        <h1>Or for your database!</h1>
+        
+        <form id="my-form"></form>
+
+        <br />
+        <br />
+        <a href="https://github.com/jadeallencook/gDoc.js/tree/gh-pages">Download on GitHub</a>
 
     </center>
 

@@ -1,12 +1,16 @@
-# gDoc.js v1.0.1
+# gDoc.js v2.0.1
 
 Use Google Spreadsheets as your CMS!
+
+[Demo Page](http://jadeallencook.github.io/gDoc.js/)
 
 # Getting Started
 
 Create a Google Spreadsheet containing all the information you will need for your site. After, choose 'Publish to the web...' in the 'File' menu. Then grab the id in the link.
 
+```
 https://docs.google.com/spreadsheets/d/__yourPublicId__/pubhtml
+```
 
 Inside of your HTML document include these two files.
 
@@ -111,4 +115,69 @@ gDoc({
 
 The loop key can be set to __false__ to iterate over all items in the document. _Make sure you instantiate all your variables in the 'columns' array, otherwise they won't show up in the mustache syntax._ 
 
-_If you have any other questions just shoot me over an email!_
+# Sending Data To Spreedsheet
+
+__The "connect" functionality uses AJAX, make sure jQuery is installed!__
+
+Create a Google Form by visiting _forms.google.com_ and then press share to get the id.
+
+```
+https://docs.google.com/forms/d/e/__yourFormId__/viewform
+```
+
+Create a blank form that will hold your inputs.
+
+```html
+<form id="example-form"></form>
+```
+
+In the footer, pass gDoc.js an object with these parameters.
+
+```javascript 
+gDoc({
+    connect: true,
+    id: yourFormId,
+    appendTo: 'example-form'
+});
+```
+
+That's it, all of your inputs are automatically inserted!
+
+When submitted, the responses will be sent to the form, and your can export to spreedsheet from there.
+
+Additionally you can add some optional parameters - 
+
+```javascript 
+gDoc({
+    connect: true,
+    id: yourFormId,
+    appendTo: 'example-form',
+    submitValue: 'Submit Form', // submit button text
+    successMsg: 'It worked!', // success message after submit
+    preloader: 'loading.gif' // img to show while form is loading
+});
+```
+
+__As of right now, gDoc will only insert "text" inputs.__
+
+# Custom Form CSS
+
+Here is an example of how we would modify the above form's CSS.
+
+```css
+    form#my-form input {
+        display: block;
+        margin: 5px auto;
+        padding: 5px;
+        border-radius: 3px;
+        border: #ddd solid thin;
+    }
+    form#my-form input[type="submit"] {
+        background-color: dodgerblue;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+    }
+```
+
+Enjoy!
