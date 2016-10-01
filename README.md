@@ -1,6 +1,6 @@
 # gDoc.js v2.0.1
 
-Use Google Spreadsheets as your CMS!
+Use Google Spreadsheets as your CMS & to save your inputs!
 
 [Demo Page](http://jadeallencook.github.io/gDoc.js/)
 
@@ -115,7 +115,7 @@ gDoc({
 
 The loop key can be set to __false__ to iterate over all items in the document. _Make sure you instantiate all your variables in the 'columns' array, otherwise they won't show up in the mustache syntax._ 
 
-# Sending Data To Spreedsheet
+# Sending Data To Spreadsheet
 
 __The "connect" functionality uses AJAX, make sure jQuery is installed!__
 
@@ -143,7 +143,7 @@ gDoc({
 
 That's it, all of your inputs are automatically inserted!
 
-When submitted, the responses will be sent to the form, and your can export to spreedsheet from there.
+When submitted, the responses will be sent to the form, and your can export to spreadsheet from there.
 
 Additionally you can add some optional parameters - 
 
