@@ -121,7 +121,9 @@ __The "connect" functionality uses AJAX, make sure jQuery is installed!__
 
 Create a Google Form by visiting _forms.google.com_ and then press share to get the id.
 
+```
 https://docs.google.com/forms/d/e/__yourFormId__/viewform
+```
 
 Create a blank form that will hold your inputs.
 
@@ -179,5 +181,3 @@ Here is an example of how we would modify the above form's CSS.
 ```
 
 Enjoy!
-
-_If you have any other questions just shoot me over an email!_
