@@ -1,0 +1,111 @@
+html, body {
+    font-family: 'Helvetica';
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2 {
+    font-weight: 100;
+}
+
+h1 {
+    background-color: dodgerblue;
+    color: #fff;
+    margin-top: 0px;
+    padding: 25px;
+}
+
+h2, h3 {
+    margin-bottom: 0px;
+}
+
+xmp {
+    margin-top: 0px;
+}
+
+p {
+    font-size: 0.75em;
+}
+
+a:link {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:active {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+div#code {
+    font-family: 'Courier';
+}
+
+div.code, div.results {
+    font-size: 0.85em;
+    border: solid thin #666;
+    display: block;
+    width: 300px;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+div.code p {
+    margin: 0px;
+}
+
+span.title {
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+table {
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+form#my-form input {
+    display: block;
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 3px;
+    border: #ddd solid thin;
+}
+
+form#my-form input[type="submit"] {
+    background-color: dodgerblue;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+}

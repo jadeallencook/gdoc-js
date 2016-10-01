@@ -6,28 +6,7 @@
     <title gDoc="title"></title>
     <script src="jquery.min.js"></script>
     <script src="gDoc.min.js"></script>
-    <style>
-        body {
-            font-family: 'Helvetica';
-        }
-        h1, h2 {
-            font-weight: 100;
-        }
-        form#my-form input {
-            display: block;
-            margin: 5px auto;
-            padding: 5px;
-            border-radius: 3px;
-            border: #ddd solid thin;
-        }
-        form#my-form input[type="submit"] {
-            background-color: dodgerblue;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -35,7 +14,11 @@
     <center>
 
         <h1>Use gDoc.js for your CMS</h1>
-        
+
+        <p>Create a Google Spreadsheet at <a href="http://sheets.google.com/" target="_blank">sheets.google.com</a>.</p>
+
+        <br />
+
         <table border="1px" cellpadding="3px">
             <tr>
                 <td><b>header</b></td>
@@ -47,34 +30,89 @@
             </tr>
         </table>
 
-<xmp>
-<script>
-gDoc('1cfW7dwJkwJq7rqTsftNy3wjCJR3-yDylc5MRmsc0Yw8', 'layout');
-</script>
-</xmp>
-
-        <!-- layout example -->
-        <h1 gDoc="header"></h1>
-
-<xmp>
-<h1 gDoc="header"></h1>
-</xmp>
-
-        <h2 gDoc="subtitle"></h2>
-
-<xmp>
-<h2 gDoc="subtitle"></h2>
-</xmp>
         <br />
+
+        <p>Edit your template and include the <a href="https://raw.githubusercontent.com/jadeallencook/gDoc.js/master/gDoc.min.js" target="_blank">gDoc.min.js</a> framework.</p>
+
         <br />
-        
+
+        <span class="title">Code</span>
+        <div class="code">
+            <p>&lt;head&gt;</p>
+            <p style="padding-left: 30px;">&lt;script src="gDoc.min.js"&gt;&lt;/script&gt;</p>
+            <p>&lt;/head&gt;</p>
+            <br />
+            <p>&lt;body&gt;</p>
+            <p style="padding-left: 30px;">&lt;h2 gDoc="header"&gt;loading...&lt;/h2&gt;
+                <br />&lt;h3 gDoc="subtitle"&gt;loading...&lt;/h3&gt;</p>
+            <p>&lt;/body&gt;</p>
+            <br />
+            <p>&lt;footer&gt;</p>
+            <p style="padding-left: 30px;">&lt;script type="javascript/text"&gt;</p>
+            <p style="padding-left: 60px;">gDoc('1cfW7dwJkwJq7rqTsftNy3wjCJR3-yDylc5MRmsc0Yw8', 'layout');</p>
+            <p style="padding-left: 30px;">&lt;/script&gt;</p>
+            <p>&lt;/footer&gt;</p>
+        </div>
+
+        <br />
+
+        <span class="title">Results</span>
+        <div class="results">
+            <h2 gDoc="header">loading...</h2>
+            <h3 gDoc="subtitle">loading...</h3>
+            <br />
+        </div>
+
+        <br />
+
+        <p>You can also use gDoc.js to create <a href="https://github.com/jadeallencook/gDoc.js#advanced-blocks-store--blog" target="_blank">stores and blogs</a>!</p>
+
+        <br />
+
         <h1>Or for your database!</h1>
         
-        <form id="my-form"></form>
+        <p>Create a Google Form at <a href="http://forms.google.com/" target="_blank">forms.google.com</a>.</p>
+        
+        <br />
+
+        <span class="title">Code</span>
+        <div class="code">
+            <p>&lt;head&gt;</p>
+            <p style="padding-left: 30px;">&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+                <br /> &lt;script src="gDoc.min.js"&gt;&lt;/script&gt;</p>
+            <p>&lt;/head&gt;</p>
+            <br />
+            <p>&lt;form id="example-form"&gt;&lt;/form&gt;</p>
+            <br />
+            <p>&lt;footer&gt;</p>
+            <p style="padding-left: 30px;">&lt;script&gt;</p>
+            <p style="padding-left: 60px;">gDoc({</p>
+            <p style="padding-left: 90px;">connect: true,</p>
+            <p style="padding-left: 90px;">id: yourFormID,</p>
+            <p style="padding-left: 90px;">appendTo: 'example-form'</p>
+            <p style="padding-left: 60px;">});</p>
+            <p style="padding-left: 30px;">&lt;/script&gt;</p>
+            <p>&lt;/footer&gt;</p>
+        </div>
+
+        <br />
+
+        <span class="title">Results</span>
+        <div class="results">
+            <center>
+                <br />
+                <form id="my-form"></form>
+                <br />
+            </center>
+        </div>
 
         <br />
         <br />
+
         <a href="https://github.com/jadeallencook/gDoc.js">Download on GitHub</a>
+
+        <br />
+        <br />
 
     </center>
 
