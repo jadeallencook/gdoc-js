@@ -136,12 +136,14 @@ window.gDoc = function (data, sheet) {
                             return function (data) {
                                 if (_success) {
                                     // Fake XHR callback.
-                                    _success.call(this, {
-                                        responseText: data.results[0]
-                                            // YQL screws with <script>s
-                                            // Get rid of them
-                                            .replace(/<script[^>]+?\/>|<script(.|\s)*?\/script>/gi, '')
-                                    }, 'success');
+                                    if (data.results.length < 1) {
+                                        // retry until response
+                                        build.connect();
+                                    } else {
+                                        _success.call(this, {
+                                            responseText: data.results[0].replace(/<script[^>]+?\/>|<script(.|\s)*?\/script>/gi, '')
+                                        }, 'success');
+                                    };
                                 }
                             };
                         })(o.success);
