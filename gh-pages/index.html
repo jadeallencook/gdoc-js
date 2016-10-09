@@ -49,7 +49,7 @@
             <br />
             <p>&lt;footer&gt;</p>
             <p style="padding-left: 30px;">&lt;script type="javascript/text"&gt;</p>
-            <p style="padding-left: 60px;">gDoc('1cfW7dwJkwJq7rqTsftNy3wjCJR3-yDylc5MRmsc0Yw8', 'layout');</p>
+            <p style="padding-left: 60px;">gDoc('yourSheetID', 'layout');</p>
             <p style="padding-left: 30px;">&lt;/script&gt;</p>
             <p>&lt;/footer&gt;</p>
         </div>
@@ -88,7 +88,7 @@
             <p style="padding-left: 30px;">&lt;script&gt;</p>
             <p style="padding-left: 60px;">gDoc({</p>
             <p style="padding-left: 90px;">connect: true,</p>
-            <p style="padding-left: 90px;">id: yourFormID,</p>
+            <p style="padding-left: 90px;">id: 'yourFormID',</p>
             <p style="padding-left: 90px;">appendTo: 'example-form'</p>
             <p style="padding-left: 60px;">});</p>
             <p style="padding-left: 30px;">&lt;/script&gt;</p>
@@ -99,7 +99,7 @@
 
         <span class="title">CSS</span>
         <div class="code">
-            <p style="text-align: left;">form#my-form input {</p>
+            <p style="text-align: left;">form#example-form input {</p>
             <p style="text-align: left; padding-left: 30px;">display: block;
                 <br /> margin: 5px auto;
                 <br /> padding: 5px;
@@ -107,7 +107,7 @@
                 <br /> border: #ddd solid thin;</p>
             <p style="text-align: left;">}</p>
             <br />
-            <p>form#my-form input[type="submit"] {</p>
+            <p>form#example-form input[type="submit"] {</p>
             <p style="padding-left: 30px;">background-color: dodgerblue;
                 <br /> color: #fff;
                 <br /> border: none;
