@@ -93,7 +93,7 @@ window.gDoc = function (data, sheet) {
             // get element to insert html into
             element = document.querySelector('[gDoc="' + element + '"]');
             // append html to element
-            element.insertAdjacentHTML('beforeend', html);
+            if (element) element.insertAdjacentHTML('beforeend', html);
         },
         // insert form inputs and connect to spreadsheet
         connect: function () {
