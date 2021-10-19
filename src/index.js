@@ -6,8 +6,10 @@
 
 import sheet from './sheet'
 
-export default class gDoc {
+class gDoc {
     constructor() {
         console.log(sheet('1cfW7dwJkwJq7rqTsftNy3wjCJR3-yDylc5MRmsc0Yw8'))
     }
 }
+
+window.gDoc = gDoc;

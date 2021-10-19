@@ -4,7 +4,7 @@
   "description": "Use Google Spreadsheets as your CMS & to save your inputs!",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
